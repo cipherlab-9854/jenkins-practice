@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any { label 'AGENT1' }
     stages {
         stage('BUILD') {
             steps {
@@ -33,8 +33,8 @@ pipeline {
         always {
             echo "i will always say hello"
         }
-        success {
-            echo "i will run when the pipeline is success"
+        succes {
+            echo "i wll run when the pipeline is success"
         }
         failure {
             echo "i will run when the pipeline is failure"
